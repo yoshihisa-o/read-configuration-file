@@ -17,8 +17,13 @@ public abstract class AbstractConfigurationFile {
 	protected AbstractConfigurationFile() {
 		prop = new Properties();
 		try {
+			// Specify the path to a file by relative path from the project directory
 			FileInputStream fileInputStream = new FileInputStream(getPath());
-			InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, "EUC-JP");
+			
+			// Specify the path to a file by relative path from the project directory
+			InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, getEncoding());
+
+			// Store the key value pair in the file
 			prop.load(inputStreamReader);
 		} catch(IOException e) {
 			e.printStackTrace();
