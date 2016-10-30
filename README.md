@@ -6,4 +6,4 @@ This sample features ...
 * How to read a configuration file stored under Java project directory.
 
 # For more detail
-Please check on 
+Please check on https://yoshihisaonoue.wordpress.com/2016/10/30/174/
